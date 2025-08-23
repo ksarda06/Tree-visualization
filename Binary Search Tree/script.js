@@ -19,7 +19,7 @@ class TreeNode {
       this.offsetY = 70;
       this.nodeRadius = 40;
     }
-  
+    
     // Insert a new node
     insert(path,node,value) {
       if(!node) {
@@ -73,14 +73,14 @@ class TreeNode {
       this.ctx.textBaseline="middle";
       this.ctx.fillText(node.value, node.x, node.y);
     }
-  
+    
     _drawLine(x1, y1, x2, y2) {
       this.ctx.beginPath();
       this.ctx.moveTo(x1, y1+this.nodeRadius);
       this.ctx.lineTo(x2, y2-this.nodeRadius);
       this.ctx.stroke();
     }
-
+    
     search(path,node,value) {
       if(!node) return node;
       path.push(node);
@@ -169,7 +169,7 @@ class TreeNode {
       document.getElementById('valueInput').value = '';
     }
   }
-
+  
   function animateInsertion(path) {
     const pathSize=path.length;
     let index=0;
@@ -187,8 +187,8 @@ class TreeNode {
         setTimeout( ()=>{
           binaryTree.renderTree(); 
         },1000 );
-        
       }
+      
       else {
           binaryTree._drawNode(path[index],'yellow');
           if(index==pathSize-1 && index!=0) {

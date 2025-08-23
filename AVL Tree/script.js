@@ -352,7 +352,7 @@ function animateDeletion(path,delNode,successor) {
           } 
         },1000);
         
-        setTimeout( ()=>avlTree.renderTree() , 2000 );
+        setTimeout(()=>balanceHeight(path,index-2),3000);
       }
       
     }
